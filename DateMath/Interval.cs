@@ -67,6 +67,9 @@ namespace DateMath
                 case Period.Daily:
                     return new DailyInterval(startDate, endDay);
 
+                case Period.BiWeekly:
+                    return new BiWeeklyInterval(startDate);
+
                 default:
                     throw new NotImplementedException();
             }

@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DailyIntervalUnitTests.cs" />
+    <Compile Include="BiWeeklyIntervalUnitTests.cs" />
     <Compile Include="WeeklyIntervalUnitTests.cs" />
     <Compile Include="MonthlyIntervalUnitTests.cs" />
     <Compile Include="QuarterlyIntervalUnitTests.cs" />

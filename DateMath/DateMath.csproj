@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DailyInterval.cs" />
+    <Compile Include="BiWeeklyInterval.cs" />
     <Compile Include="WeeklyInterval.cs" />
     <Compile Include="QuarterlyInterval.cs" />
     <Compile Include="DateExtensions.cs" />
