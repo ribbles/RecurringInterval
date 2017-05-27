@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="WeeklyIntervalUnitTests.cs" />
     <Compile Include="MonthlyIntervalUnitTests.cs" />
     <Compile Include="QuarterlyIntervalUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

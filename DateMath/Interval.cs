@@ -59,6 +59,9 @@ namespace DateMath
                 case Period.Quarterly:
                     return new QuarterlyInterval(startDate, endDay);
 
+                case Period.Weekly:
+                    return new WeeklyInterval(startDate, endDay);
+
                 default:
                     throw new NotImplementedException();
             }

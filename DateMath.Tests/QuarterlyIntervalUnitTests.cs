@@ -13,8 +13,6 @@ namespace DateMath.Tests
         private static readonly DateTime Jan2nd = new DateTime(2017, 1, 2);
         private static readonly DateTime Jan3rd = new DateTime(2017, 1, 3);
         private static readonly DateTime Jan31st = new DateTime(2017, 1, 31);
-        private static readonly DateTime March2nd = new DateTime(2017, 3, 2);
-        private static readonly DateTime March3rd = new DateTime(2017, 3, 3);
         private static readonly DateTime March30th = new DateTime(2017, 3, 30);
         private static readonly DateTime March31st = new DateTime(2017, 3, 31);
         private static readonly DateTime April1st = new DateTime(2017, 4, 1);
@@ -23,10 +21,6 @@ namespace DateMath.Tests
         private static readonly DateTime April29th = new DateTime(2017, 4, 29);
         private static readonly DateTime April30th = new DateTime(2017, 4, 30);
         private static readonly DateTime May1st = new DateTime(2017, 5, 1);
-        private static readonly DateTime May2nd = new DateTime(2017, 5, 2);
-        private static readonly DateTime May29th = new DateTime(2017, 5, 29);
-        private static readonly DateTime May30th = new DateTime(2017, 5, 30);
-        private static readonly DateTime May31st = new DateTime(2017, 5, 31);
         private static readonly DateTime June28th = new DateTime(2017, 6, 28);
         private static readonly DateTime June29th = new DateTime(2017, 6, 29);
         private static readonly DateTime June30th = new DateTime(2017, 6, 30);
@@ -34,7 +28,6 @@ namespace DateMath.Tests
         private static readonly DateTime July2nd = new DateTime(2017, 7, 2);
         private static readonly DateTime July30th = new DateTime(2017, 7, 30);
         private static readonly DateTime July31st = new DateTime(2017, 7, 31);
-        private static readonly DateTime August30th = new DateTime(2017, 8, 30);
         private static readonly DateTime Sept27th = new DateTime(2017, 9, 27);
         private static readonly DateTime Oct30th = new DateTime(2017, 10, 30);
 
