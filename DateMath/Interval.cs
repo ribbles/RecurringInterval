@@ -9,6 +9,8 @@ namespace DateMath
             Period = period;
         }
 
+        public int TotalDays => (int)EndDate.Subtract(StartDate).TotalDays + 1;
+
         public DateTime StartDate { get; protected set; }
         public DateTime EndDate { get; protected set; }
         public Period Period { get; }
@@ -61,6 +63,9 @@ namespace DateMath
 
                 case Period.Weekly:
                     return new WeeklyInterval(startDate, endDay);
+
+                case Period.Daily:
+                    return new DailyInterval(startDate, endDay);
 
                 default:
                     throw new NotImplementedException();
