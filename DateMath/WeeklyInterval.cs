@@ -4,8 +4,6 @@ namespace DateMath
 {
     internal class WeeklyInterval : Interval
     {
-        public int EndDay { get; }
-
         public WeeklyInterval(DateTime startDate, int endDay) : base(Period.Weekly)
         {
             EndDay = endDay;

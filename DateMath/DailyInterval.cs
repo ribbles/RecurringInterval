@@ -4,7 +4,6 @@ namespace DateMath
 {
     internal class DailyInterval : Interval
     {
-        public int EndDay { get; }
 
         public DailyInterval(DateTime startDate, int endDay) : base(Period.Daily)
         {

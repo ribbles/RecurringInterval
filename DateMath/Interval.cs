@@ -10,6 +10,7 @@ namespace DateMath
         }
 
         public int TotalDays => (int)EndDate.Subtract(StartDate).TotalDays + 1;
+        public int EndDay { get; protected set; }
 
         public DateTime StartDate { get; protected set; }
         public DateTime EndDate { get; protected set; }
@@ -69,6 +70,9 @@ namespace DateMath
 
                 case Period.BiWeekly:
                     return new BiWeeklyInterval(startDate);
+
+                case Period.BiMonthly:
+                    return new BiMonthlyInterval(startDate, endDay);
 
                 default:
                     throw new NotImplementedException();

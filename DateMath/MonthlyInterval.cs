@@ -4,8 +4,6 @@ namespace DateMath
 {
     internal class MonthlyInterval : Interval
     {
-        public int EndDay { get; }
-
         public MonthlyInterval(DateTime startDate, int endDay) : base(Period.Monthly)
         {
             var endDateAtEndOfMonth = false;

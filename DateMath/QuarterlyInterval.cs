@@ -8,8 +8,6 @@ namespace DateMath
 {
     internal class QuarterlyInterval : Interval
     {
-        public int EndDay { get; }
-
         public QuarterlyInterval(DateTime startDate, int endDay) : base(Period.Quarterly)
         {
             var endDateAtEndOfQuarter = false;
