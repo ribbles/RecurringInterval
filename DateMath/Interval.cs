@@ -74,6 +74,9 @@ namespace DateMath
                 case Period.BiMonthly:
                     return new BiMonthlyInterval(startDate, endDay);
 
+                case Period.Annual:
+                case Period.FourFourFive:
+                case Period.FourFourFour:
                 default:
                     throw new NotImplementedException();
             }

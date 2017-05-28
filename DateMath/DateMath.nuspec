@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>https://github.com/ribbles</authors>
+    <owners>https://github.com/ribbles</owners>
+    <licenseUrl>https://github.com/ribbles/DateMath/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ribbles/DateMath/</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# library for calculating intervals and the duration between days, weeks, fortnights, bimonthly, months, quarters and years</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>C# .NET DateTime Calendar Duration Interval</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\DateMath.dll" target="lib\net45\DateMath.dll" />
+  </files>
+</package>
