@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DateMath.Tests
+namespace RecurringInterval.Tests
 {
     [TestClass]
     public class WeeklyIntervalUnitTests : Dates

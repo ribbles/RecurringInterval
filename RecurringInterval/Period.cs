@@ -1,4 +1,4 @@
-﻿namespace DateMath
+﻿namespace RecurringInterval
 {
     public enum Period
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DateMath
+namespace RecurringInterval
 {
     internal class QuarterlyInterval : Interval
     {

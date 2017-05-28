@@ -6,8 +6,8 @@
     <title>$title$</title>
     <authors>https://github.com/ribbles</authors>
     <owners>https://github.com/ribbles</owners>
-    <licenseUrl>https://github.com/ribbles/DateMath/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/ribbles/DateMath/</projectUrl>
+    <licenseUrl>https://github.com/ribbles/RecurringInterval/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ribbles/RecurringInterval/</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>C# library for calculating intervals and the duration between days, weeks, fortnights, bimonthly, months, quarters and years</description>
@@ -16,6 +16,6 @@
     <tags>C# .NET DateTime Calendar Duration Interval</tags>
   </metadata>
   <files>
-    <file src="bin\Release\DateMath.dll" target="lib\net45\DateMath.dll" />
+    <file src="bin\Release\RecurringInterval.dll" target="lib\net45\RecurringInterval.dll" />
   </files>
 </package>

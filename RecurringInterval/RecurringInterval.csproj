@@ -8,8 +8,8 @@
     <ProjectGuid>{761E9924-4D27-48F1-A51A-EF1406B1D2D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DateMath</RootNamespace>
-    <AssemblyName>DateMath</AssemblyName>
+    <RootNamespace>RecurringInterval</RootNamespace>
+    <AssemblyName>RecurringInterval</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="DateMath.nuspec">
+    <None Include="RecurringInterval.nuspec">
       <SubType>Designer</SubType>
     </None>
     <None Include="project.json" />

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DateMath.Tests
+namespace RecurringInterval.Tests
 {
     public abstract class Dates
     {

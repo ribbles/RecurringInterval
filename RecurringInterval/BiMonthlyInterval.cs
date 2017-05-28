@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace DateMath
+namespace RecurringInterval
 {
     internal class BiMonthlyInterval : Interval
     {

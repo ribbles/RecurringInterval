@@ -60,9 +60,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DateMath\DateMath.csproj">
+    <ProjectReference Include="..\RecurringInterval\RecurringInterval.csproj">
       <Project>{761e9924-4d27-48f1-a51a-ef1406b1d2d0}</Project>
-      <Name>DateMath</Name>
+      <Name>RecurringInterval</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

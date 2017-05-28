@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DateMath
+namespace RecurringInterval
 {
     public static class DateExtensions
     {
