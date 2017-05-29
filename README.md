@@ -5,13 +5,13 @@ C# Library for representing and managing recurring intervals, suitable for calen
 
 ## Supported Intervals
 
-* Daily (+days)
-* Weekly (+dayOfWeek)
-* BiWeekly / Fortnightly
-* BiMonthly (+dayOfMonth)
-* Monthly (+dayOfMonth)
-* Quarterly (+dayOfQuarter)
-* Annual - TODO
+* [Daily](#daily) (+days)
+* [Weekly](#weekly) (+dayOfWeek)
+* [BiWeekly](#biweekly) / Fortnightly
+* [BiMonthly](#bimonthly) (+dayOfMonth)
+* [Monthly](#monthly) (+dayOfMonth)
+* [Quarterly](#quarterly) (+dayOfQuarter)
+* [Annually](#annually) (+dayOfYear)
 * [FourFourFour](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) - TODO
 * [FourFourFive](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) - TODO
 
@@ -28,13 +28,17 @@ PM> Install-Package RecurringInterval
 ## Usage
 
 ```csharp
-var interval = Interval.Create(<Period>, <Date>, integer);
+var interval = Interval.Create(<Period>, <Date>, <Integer End Day>);
 var nextInterval = interval.Next();
 ```
 
 ## Daily 
 
-The date argument is always the start date. The interger is how many days in the interval.
+```csharp
+Interval.Create(Period.Daily, <start date>, <days>);
+```
+
+The date argument is always the start date. The interger argument is how many days in the interval.
 
 ```csharp
 var interval = Interval.Create(Period.Daily, new DateTime(2017,1,1), 2); //Interval has 2 days
@@ -50,7 +54,11 @@ Assert.AreEqual(2, next.TotalDays);
 
 ## Weekly 
 
-The interger is the end day of the week, can can be cast from the `System.DayOfWeek` enum. The date argument is *any* date between the end date and the start date. 
+```csharp
+Interval.Create(Period.Weekly, <start date>, <day of week to end on>);
+```
+
+The interger is the day of the week to end on, can can be cast from the `System.DayOfWeek` enum. The date argument is *any* date between the end date and the start date. 
 
 ```csharp
 var interval = Interval.Create(Period.Daily, new DateTime(2017, 5, 2), (int)DayOfWeek.Monday /* 2 */);
@@ -62,4 +70,57 @@ var next = interval.Next();
 Assert.AreEqual(new DateTime(2017, 5, 9) next.StartDate);
 Assert.AreEqual(new DateTime(2017, 5, 15), next.EndDate);
 Assert.AreEqual(7, next.TotalDays);
+```
+
+## Bi-Weekly / Fortnighly
+
+```csharp
+Interval.Create(Period.Daily, <start date>, <ignored>);
+```
+
+The date argument is always the start date. The interger argument is ignored.
+
+## Bi-Monthly
+
+```csharp
+Interval.Create(Period.BiMonthly, <start date>, <end day of month>);
+```
+
+This is the most complex, and follows the following conventions for the integer argument end date:
+
+For periods ending on:
+* 1st and 16th of each month: use 1 or 16
+* 2nd and 17th of month: use 2 or 17
+* 3rd and 18th of month: use 3 or 18
+* 4th and 19th of month: use 4 or 19
+* 5th and 20th of month: use 5 or 20
+* 6th and 21st of month: use 6 or 21
+* 7th and 22nd of month: use 7 or 22
+* 8th and 23rd of month: use 8 or 23
+* 9th and 34th of month: use 9 or 24
+* 10th and 25th of month: use 10 or 25
+* 11th and 26th of month: use 11 or 26
+* 12th and 27th of month: use 12 or 27
+* 13th and last day of month: use 13
+* 14th and last day of month: use 14
+* 15th and last day of month: use -1, 15 or 28+
+
+## Monthly
+
+```csharp
+Interval.Create(Period.Monthly, <start date>, <day of month to end on>);
+```
+
+## Qarterly
+
+```csharp
+Interval.Create(Period.Monthly, <start date>, <day of month to end on>);
+```
+
+## Annually
+
+> Note: Not yet implemented
+
+```csharp
+Interval.Create(Period.Annual, <start date>, <day of year to end on>);
 ```
