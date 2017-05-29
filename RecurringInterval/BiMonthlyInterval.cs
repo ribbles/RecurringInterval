@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace RecurringInterval
 {
@@ -104,56 +102,55 @@ namespace RecurringInterval
             }
         }
 
+        //static readonly Func<DateTime, DateTime> add15 = a => a.AddDays(15);
+        //static readonly Func<DateTime, DateTime> sub15 = a => a.AddMonths(1).AddDays(-15);
+        //static readonly Func<DateTime, DateTime> mov15 = a => new DateTime(a.AddMonths(1).Year, a.AddMonths(1).Month, 15);
 
-        static readonly Func<DateTime, DateTime> add15 = a => a.AddDays(15);
-        static readonly Func<DateTime, DateTime> sub15 = a => a.AddMonths(1).AddDays(-15);
-        static readonly Func<DateTime, DateTime> mov15 = a => new DateTime(a.AddMonths(1).Year, a.AddMonths(1).Month, 15);
-
-        static readonly IReadOnlyDictionary<int, Func<DateTime, DateTime>> dateMap = new ReadOnlyDictionary<int, Func<DateTime, DateTime>>(new Dictionary<int, Func<DateTime, DateTime>>
-            {
-                { 01, a => new DateTime(a.Year, a.Month,16) }, // move to 16th
-                { 02, add15 }, // add 15
-                { 03, add15 },
-                { 04, add15 },
-                { 05, add15 },
-                { 06, add15 },
-                { 07, add15 },
-                { 08, add15 },
-                { 09, add15 },
-                { 10, add15 },
-                { 11, add15 },
-                { 12, add15 },
-                { 13, add15  },
-                { 14, a => new DateTime(a.Year, a.Month, DateTime.DaysInMonth(a.Year, a.Month)) }, // move to last day of month
-                { 15, a => new DateTime(a.Year, a.Month, DateTime.DaysInMonth(a.Year, a.Month)) }, // move to last day of month
-                { 16, a => new DateTime(a.AddMonths(1).Year, a.AddMonths(1).Month, 1) }, // 1st day of next month
-                { 17, sub15 }, //add month - 15
-                { 18, sub15 },
-                { 19, sub15 },
-                { 20, sub15 },
-                { 21, sub15 },
-                { 22, sub15 },
-                { 23, sub15 },
-                { 24, sub15 },
-                { 25, sub15 },
-                { 26, sub15 },
-                { 27, sub15 },
-                { 28, mov15 }, // move to 15th day of next month
-                { 29, mov15 },
-                { 30, mov15 },
-                { 31, mov15 },
-            });
-        public BiMonthlyInterval(DateTime startDate) : base(Period.BiMonthly)
-        {
-            StartDate = startDate;
-            var nextStartDate = dateMap[StartDate.Day](StartDate);
-            EndDate = nextStartDate.AddDays(-1);
-            EndDay = EndDate.Day == 1
-                ? 1
-                : StartDate.Day > EndDate.Day
-                    ? EndDate.Day
-                    : StartDate.Day - 1;
-        }
+        //static readonly IReadOnlyDictionary<int, Func<DateTime, DateTime>> dateMap = new ReadOnlyDictionary<int, Func<DateTime, DateTime>>(new Dictionary<int, Func<DateTime, DateTime>>
+        //    {
+        //        { 01, a => new DateTime(a.Year, a.Month,16) }, // move to 16th
+        //        { 02, add15 }, // add 15
+        //        { 03, add15 },
+        //        { 04, add15 },
+        //        { 05, add15 },
+        //        { 06, add15 },
+        //        { 07, add15 },
+        //        { 08, add15 },
+        //        { 09, add15 },
+        //        { 10, add15 },
+        //        { 11, add15 },
+        //        { 12, add15 },
+        //        { 13, add15  },
+        //        { 14, a => new DateTime(a.Year, a.Month, DateTime.DaysInMonth(a.Year, a.Month)) }, // move to last day of month
+        //        { 15, a => new DateTime(a.Year, a.Month, DateTime.DaysInMonth(a.Year, a.Month)) }, // move to last day of month
+        //        { 16, a => new DateTime(a.AddMonths(1).Year, a.AddMonths(1).Month, 1) }, // 1st day of next month
+        //        { 17, sub15 }, //add month - 15
+        //        { 18, sub15 },
+        //        { 19, sub15 },
+        //        { 20, sub15 },
+        //        { 21, sub15 },
+        //        { 22, sub15 },
+        //        { 23, sub15 },
+        //        { 24, sub15 },
+        //        { 25, sub15 },
+        //        { 26, sub15 },
+        //        { 27, sub15 },
+        //        { 28, mov15 }, // move to 15th day of next month
+        //        { 29, mov15 },
+        //        { 30, mov15 },
+        //        { 31, mov15 },
+        //    });
+        //public BiMonthlyInterval(DateTime startDate) : base(Period.BiMonthly)
+        //{
+        //    StartDate = startDate;
+        //    var nextStartDate = dateMap[StartDate.Day](StartDate);
+        //    EndDate = nextStartDate.AddDays(-1);
+        //    EndDay = EndDate.Day == 1
+        //        ? 1
+        //        : StartDate.Day > EndDate.Day
+        //            ? EndDate.Day
+        //            : StartDate.Day - 1;
+        //}
 
         public override Interval Next()
         {
