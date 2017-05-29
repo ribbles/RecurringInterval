@@ -7,13 +7,13 @@ C# Library for representing and managing recurring intervals, suitable for calen
 
 * [Daily](#daily) (+days)
 * [Weekly](#weekly) (+dayOfWeek)
-* [BiWeekly](#biweekly) / Fortnightly
-* [BiMonthly](#bimonthly) (+dayOfMonth)
+* [BiWeekly / Fortnightly](#bi-weekly--fortnighly)
+* [BiMonthly](#bi-monthly) (+dayOfMonth)
 * [Monthly](#monthly) (+dayOfMonth)
 * [Quarterly](#quarterly) (+dayOfQuarter)
 * [Annually](#annually) (+dayOfYear)
-* [FourFourFour](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) - TODO
-* [FourFourFive](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) - TODO
+* [FourFourFour](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) (+dayOfPeriod)
+* [FourFourFive](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) (+dayOfPeriod)
 
 ## Installation
 
@@ -111,10 +111,10 @@ For periods ending on:
 Interval.Create(Period.Monthly, <start date>, <day of month to end on>);
 ```
 
-## Qarterly
+## Quarterly
 
 ```csharp
-Interval.Create(Period.Monthly, <start date>, <day of month to end on>);
+Interval.Create(Period.Quarterly, <start date>, <day of quarter to end on>);
 ```
 
 ## Annually
