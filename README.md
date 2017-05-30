@@ -25,6 +25,8 @@ Run the following command in the NuGet Package Manager console to install the li
 PM> Install-Package RecurringInterval
 ````
 
+For more information, visit the [Nuget RecurringInterval repository](https://www.nuget.org/packages/RecurringInterval/)
+
 ## Usage
 
 ```csharp
