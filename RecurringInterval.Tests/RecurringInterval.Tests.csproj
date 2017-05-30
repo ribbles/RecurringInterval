@@ -60,9 +60,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RecurringInterval\RecurringInterval.csproj">
-      <Project>{761e9924-4d27-48f1-a51a-ef1406b1d2d0}</Project>
-      <Name>RecurringInterval</Name>
+    <ProjectReference Include="..\RecurringInterval\RecurringInterval.4.5.csproj">
+      <Project>{8e149d4b-d8d6-4414-b691-d6e79f668444}</Project>
+      <Name>RecurringInterval.4.5</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
