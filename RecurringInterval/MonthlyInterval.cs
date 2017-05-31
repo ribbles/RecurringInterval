@@ -4,6 +4,10 @@ namespace RecurringInterval
 {
     internal class MonthlyInterval : Interval
     {
+        public MonthlyInterval(DateTime startDate) : this(startDate, startDate.Day + 1)
+        {
+        }
+
         public MonthlyInterval(DateTime startDate, int endDay) : base(Period.Monthly)
         {
             var endDateAtEndOfMonth = false;

@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CFB0662E-1782-48BC-AB45-FCD95E037D04}</ProjectGuid>
-	<IntermediateOutputPath>obj\obj462</IntermediateOutputPath>
+    <IntermediateOutputPath>obj\obj462</IntermediateOutputPath>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RecurringInterval</RootNamespace>
@@ -41,6 +41,7 @@
     <Compile Include="DailyInterval.cs" />
     <Compile Include="DateExtensions.cs" />
     <Compile Include="Interval.cs" />
+    <Compile Include="IntervalFactory.cs" />
     <Compile Include="MonthlyInterval.cs" />
     <Compile Include="Period.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

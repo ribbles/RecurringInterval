@@ -4,6 +4,9 @@ namespace RecurringInterval
 {
     internal class DailyInterval : Interval
     {
+        public DailyInterval(DateTime startDate) : this(startDate, 1)
+        {
+        }
 
         public DailyInterval(DateTime startDate, int endDay) : base(Period.Daily)
         {

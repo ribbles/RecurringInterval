@@ -4,6 +4,10 @@ namespace RecurringInterval
 {
     internal class QuarterlyInterval : Interval
     {
+        public QuarterlyInterval(DateTime startDate) : this(startDate, startDate.DayOfQuarter() + 1)
+        {
+        }
+
         public QuarterlyInterval(DateTime startDate, int endDay) : base(Period.Quarterly)
         {
             var endDateAtEndOfQuarter = false;

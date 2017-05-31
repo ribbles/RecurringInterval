@@ -15,6 +15,10 @@ namespace RecurringInterval
             * if the date is 28-31, move to 15th day of next month
         */
 
+        public BiMonthlyInterval(DateTime startDate) : this(startDate, startDate.Day + 1)
+        {
+        }
+
         public BiMonthlyInterval(DateTime startDate, int endDay) : base(Period.BiMonthly)
         {
             EndDay = endDay;

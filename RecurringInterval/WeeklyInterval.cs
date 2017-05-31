@@ -4,6 +4,10 @@ namespace RecurringInterval
 {
     internal class WeeklyInterval : Interval
     {
+        public WeeklyInterval(DateTime startDate): this(startDate, ((int)startDate.DayOfWeek + 1) % 6)
+        {
+        }
+
         public WeeklyInterval(DateTime startDate, int endDay) : base(Period.Weekly)
         {
             EndDay = endDay;

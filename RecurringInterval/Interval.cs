@@ -50,36 +50,12 @@ namespace RecurringInterval
         //        return true;
         //    }
 
+        static readonly IntervalFactory factory = new IntervalFactory();
 
 
         public static Interval Create(Period period, DateTime startDate, int endDay)
         {
-            switch (period)
-            {
-                case Period.Monthly:
-                    return new MonthlyInterval(startDate, endDay);
-
-                case Period.Quarterly:
-                    return new QuarterlyInterval(startDate, endDay);
-
-                case Period.Weekly:
-                    return new WeeklyInterval(startDate, endDay);
-
-                case Period.Daily:
-                    return new DailyInterval(startDate, endDay);
-
-                case Period.BiWeekly:
-                    return new BiWeeklyInterval(startDate);
-
-                case Period.BiMonthly:
-                    return new BiMonthlyInterval(startDate, endDay);
-
-                case Period.Annual:
-                case Period.FourFourFive:
-                case Period.FourFourFour:
-                default:
-                    throw new NotImplementedException();
-            }
+            return factory.CreateFromEndDay(period, startDate, endDay);
         }
 
         public abstract Interval Next();
