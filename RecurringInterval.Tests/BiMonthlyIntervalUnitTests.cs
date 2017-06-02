@@ -196,5 +196,71 @@ namespace RecurringInterval.Tests
             AssertInterval(interval, April1st, April15th, Period.BiMonthly);
 
         }
+
+
+        [TestMethod]
+        public void Test_BiMonthlyInterval_StartDate()
+        {
+            var factory = new IntervalFactory();
+            var startDate = Jan1st;
+            var interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(14), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(17), Period.BiMonthly);
+
+            startDate = startDate.AddDays(1);
+            interval = factory.CreateFromStartDate(Period.BiMonthly, startDate);
+            AssertInterval(interval, startDate, startDate.AddDays(16), Period.BiMonthly);
+        }
     }
 }

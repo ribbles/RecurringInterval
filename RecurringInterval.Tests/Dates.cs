@@ -91,6 +91,7 @@ namespace RecurringInterval.Tests
         protected static readonly DateTime Mar13th = new DateTime(2017, 3, 13);
         protected static readonly DateTime April12th = new DateTime(2017, 4, 12);
         protected static readonly DateTime April14th = new DateTime(2017, 4, 14);
+        protected static readonly DateTime Jan15th = new DateTime(2017, 1, 15);
         
         protected void AssertInterval(Interval interval, DateTime start, DateTime end, Period period, bool assertAllStartDates = true)
         {
