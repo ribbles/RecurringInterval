@@ -12,8 +12,8 @@ C# Library for representing and managing recurring intervals, suitable for calen
 * [Monthly](#monthly) (+dayOfMonth)
 * [Quarterly](#quarterly) (+dayOfQuarter)
 * [Annually](#annually) (+dayOfYear)
-* [FourFourFour](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) (+dayOfPeriod)
-* [FourFourFive](https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar) (+dayOfPeriod)
+* [FourFourFour] (#four-four-four) (+dayOfPeriod)
+* [FourFourFive](#four-four-five) (+dayOfPeriod)
 
 ## Installation
 
@@ -121,8 +121,19 @@ Interval.Create(Period.Quarterly, <start date>, <day of quarter to end on>);
 
 ## Annually
 
-> Note: Not yet implemented
-
 ```csharp
 Interval.Create(Period.Annual, <start date>, <day of year to end on>);
-```
+
+
+## Four-Four-Four
+See https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar for a definition.
+
+```csharp
+Interval.Create(Period.FourFourFour, <start date>, <ignored>);
+
+
+## Four-Four-Five
+See https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar for a definition.
+
+```csharp
+Interval.Create(Period.FourFourFive, <start date>, <ignored>);

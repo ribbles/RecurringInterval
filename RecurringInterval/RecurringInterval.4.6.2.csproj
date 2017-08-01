@@ -36,10 +36,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnnualInterval.cs" />
     <Compile Include="BiMonthlyInterval.cs" />
     <Compile Include="BiWeeklyInterval.cs" />
     <Compile Include="DailyInterval.cs" />
     <Compile Include="DateExtensions.cs" />
+    <Compile Include="FourFourFiveInterval.cs" />
+    <Compile Include="FourFourFourInterval.cs" />
     <Compile Include="Interval.cs" />
     <Compile Include="IntervalFactory.cs" />
     <Compile Include="MonthlyInterval.cs" />

@@ -54,6 +54,7 @@
     <Compile Include="BiWeeklyIntervalUnitTests.cs" />
     <Compile Include="BiMonthlyIntervalUnitTests.cs" />
     <Compile Include="Dates.cs" />
+    <Compile Include="FourFourFourUnitTests.cs" />
     <Compile Include="WeeklyIntervalUnitTests.cs" />
     <Compile Include="MonthlyIntervalUnitTests.cs" />
     <Compile Include="QuarterlyIntervalUnitTests.cs" />

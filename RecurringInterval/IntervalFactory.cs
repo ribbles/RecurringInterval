@@ -35,8 +35,14 @@ namespace RecurringInterval
                     return new BiMonthlyInterval(date, endDay);
 
                 case Period.Annual:
+                    return new AnnualInterval(date, endDay);
+
                 case Period.FourFourFive:
+                    return new FourFourFiveInterval(date);
+
                 case Period.FourFourFour:
+                    return new FourFourFourInterval(date);
+
                 default:
                     throw new NotImplementedException();
             }
@@ -64,8 +70,14 @@ namespace RecurringInterval
                     return new BiMonthlyInterval(startDate);
 
                 case Period.Annual:
+                    return new AnnualInterval(startDate);
+
                 case Period.FourFourFive:
+                    return new FourFourFiveInterval(startDate);
+
                 case Period.FourFourFour:
+                    return new FourFourFourInterval(startDate);
+
                 default:
                     throw new NotImplementedException();
             }
