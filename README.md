@@ -123,6 +123,7 @@ Interval.Create(Period.Quarterly, <start date>, <day of quarter to end on>);
 
 ```csharp
 Interval.Create(Period.Annual, <start date>, <day of year to end on>);
+```
 
 
 ## Four-Four-Four
@@ -130,6 +131,7 @@ See https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar for a definitio
 
 ```csharp
 Interval.Create(Period.FourFourFour, <start date>, <ignored>);
+```
 
 
 ## Four-Four-Five
@@ -137,3 +139,4 @@ See https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar for a definitio
 
 ```csharp
 Interval.Create(Period.FourFourFive, <start date>, <ignored>);
+```

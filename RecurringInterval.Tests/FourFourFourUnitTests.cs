@@ -6,7 +6,7 @@ namespace RecurringInterval.Tests
     [TestClass]
     public class FourFourFourUnitTests: Dates
     {
-        [TestMethod]
+        //[TestMethod]
         public void Test_FourFourFourInterval()
         {
             var interval = Interval.Create(Period.FourFourFour, new DateTime(2017, 7, 1), 0);
