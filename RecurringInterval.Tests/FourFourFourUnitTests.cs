@@ -9,7 +9,7 @@ namespace RecurringInterval.Tests
         //[TestMethod]
         public void Test_FourFourFourInterval()
         {
-            var interval = Interval.Create(Period.FourFourFour, new DateTime(2017, 7, 1), 0);
+            var interval = Interval.Create(Period.FourFourFour, new DateTime(2017, 7, 1));
             AssertInterval(interval, new DateTime(2017, 7, 1), new DateTime(2017, 7, 28), Period.FourFourFour, false);
 
             interval = interval.Next();

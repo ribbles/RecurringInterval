@@ -10,7 +10,7 @@ namespace RecurringInterval.Tests
         [TestMethod]
         public void Test_BiWeeklyInterval()
         {
-            var interval = Interval.Create(Period.BiWeekly, Mar26th, 0);
+            var interval = Interval.Create(Period.BiWeekly, Mar26th);
             AssertInterval(interval, Mar26th, April8th, Period.BiWeekly, false);
 
             interval = interval.Next();

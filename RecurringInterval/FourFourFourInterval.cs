@@ -4,11 +4,10 @@ namespace RecurringInterval
 {
     public class FourFourFourInterval : Interval
     {
-        public FourFourFourInterval(DateTime date) : base(Period.FourFourFour)
+        public FourFourFourInterval(DateTime startDate) : base(Period.FourFourFour)
         {
-            StartDate = date;
-            EndDay = ((4 + 4 + 4) * 7) - 1;
-            EndDate = date.AddDays(EndDay);
+            StartDate = startDate;
+            EndDate = startDate.AddDays(4 * 7 - 1);
         }
 
         public override Interval Next()

@@ -4,40 +4,26 @@ namespace RecurringInterval
 {
     internal class QuarterlyInterval : Interval
     {
-        public QuarterlyInterval(DateTime startDate) : this(startDate, startDate.DayOfQuarter() + 1)
+        public QuarterlyInterval(DateTime startDate) : base(Period.Quarterly)
         {
-        }
-
-        public QuarterlyInterval(DateTime startDate, int endDay) : base(Period.Quarterly)
-        {
-            var endDateAtEndOfQuarter = false;
-
-            EndDay = endDay;
-            if (EndDay == -1 || EndDay >= 90)
-                endDateAtEndOfQuarter = true;
-
+            StartDate = startDate;
             int startDateDayOfQuarter = startDate.DayOfQuarter();
+            var endDateAtEndOfQuarter = startDateDayOfQuarter == 1;
 
-            if (endDateAtEndOfQuarter)
-                StartDate = startDate.StartOfQuarter();
-
-            else if (endDay < startDateDayOfQuarter)// past this quarter, move to next
-                StartDate = startDate.AddDays(1 + endDay - startDateDayOfQuarter);
-
-            else
-                StartDate = startDate.AddDays(-1 - startDateDayOfQuarter).StartOfQuarter().AddDays(endDay);
+            
 
             if (endDateAtEndOfQuarter)
                 EndDate = StartDate.EndOfQuarter();
+
             else
-                EndDate = StartDate.EndOfQuarter().AddDays(endDay);
+                EndDate = StartDate.AddMonths(3).AddDays(-1);
 
         }
 
 
         public override Interval Next()
         {
-            return new QuarterlyInterval(NextStartDate(), EndDay);
+            return new QuarterlyInterval(NextStartDate());
         }
 
         private DateTime NextStartDate()

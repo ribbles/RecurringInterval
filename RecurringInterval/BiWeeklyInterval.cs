@@ -8,7 +8,6 @@ namespace RecurringInterval
         {
             StartDate = startDate;
             EndDate = startDate.AddDays(13);
-            EndDay = 14;
         }
 
         public override Interval Next()

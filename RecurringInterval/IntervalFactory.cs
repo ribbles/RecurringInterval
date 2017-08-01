@@ -9,45 +9,10 @@ namespace RecurringInterval
         /// 
         /// </summary>
         /// <param name="period"></param>
-        /// <param name="date">Any date between the first and last day of the interval</param>
-        /// <param name="endDay">Last day of the period</param>
+        /// <param name="startDate">The first date</param>
+        /// <param name="firstStartDate">IOnly required for 4-4-5 calendar</param>
         /// <returns></returns>
-        public Interval CreateFromEndDay(Period period, DateTime date, int endDay)
-        {
-            switch (period)
-            {
-                case Period.Monthly:
-                    return new MonthlyInterval(date, endDay);
-
-                case Period.Quarterly:
-                    return new QuarterlyInterval(date, endDay);
-
-                case Period.Weekly:
-                    return new WeeklyInterval(date, endDay);
-
-                case Period.Daily:
-                    return new DailyInterval(date, endDay);
-
-                case Period.BiWeekly:
-                    return new BiWeeklyInterval(date);
-
-                case Period.BiMonthly:
-                    return new BiMonthlyInterval(date, endDay);
-
-                case Period.Annual:
-                    return new AnnualInterval(date, endDay);
-
-                case Period.FourFourFive:
-                    return new FourFourFiveInterval(date);
-
-                case Period.FourFourFour:
-                    return new FourFourFourInterval(date);
-
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-        public Interval CreateFromStartDate(Period period, DateTime startDate)
+        public Interval CreateFromStartDate(Period period, DateTime startDate, DateTime? firstStartDate = null)
         {
             switch (period)
             {
@@ -73,7 +38,10 @@ namespace RecurringInterval
                     return new AnnualInterval(startDate);
 
                 case Period.FourFourFive:
-                    return new FourFourFiveInterval(startDate);
+                    if (firstStartDate == null)
+                        throw new ArgumentNullException(nameof(firstStartDate));
+
+                    return new FourFourFiveInterval(startDate, firstStartDate.Value);
 
                 case Period.FourFourFour:
                     return new FourFourFourInterval(startDate);

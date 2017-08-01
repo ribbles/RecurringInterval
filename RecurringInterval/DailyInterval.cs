@@ -4,22 +4,15 @@ namespace RecurringInterval
 {
     internal class DailyInterval : Interval
     {
-        public DailyInterval(DateTime startDate) : this(startDate, 1)
+        public DailyInterval(DateTime startDate) : base(Period.Daily)
         {
-        }
-
-        public DailyInterval(DateTime startDate, int endDay) : base(Period.Daily)
-        {
-            if (endDay <= 0) endDay = 1;
-
-            EndDay = endDay;
             StartDate = startDate;
-            EndDate = StartDate.AddDays(EndDay - 1);
+            EndDate = StartDate;
         }
 
         public override Interval Next()
         {
-            return new DailyInterval(NextStartDate(), EndDay);
+            return new DailyInterval(NextStartDate());
         }
 
         private DateTime NextStartDate()

@@ -12,25 +12,13 @@ namespace RecurringInterval.Tests
         public void Test_WeeklyInterval_Sunday()
         {
             var factory = new IntervalFactory();
-            var interval = factory.CreateFromEndDay(Period.Weekly, April2nd, (int)DayOfWeek.Sunday);
+            var interval = factory.CreateFromStartDate(Period.Weekly, Mar27th);
             AssertInterval(interval, Mar27th, April2nd, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, April1st, (int)DayOfWeek.Sunday);
-            AssertInterval(interval, Mar27th, April2nd, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar31st, (int)DayOfWeek.Sunday);
-            AssertInterval(interval, Mar27th, April2nd, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar30th, (int)DayOfWeek.Sunday);
-            AssertInterval(interval, Mar27th, April2nd, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar29th, (int)DayOfWeek.Sunday);
-            AssertInterval(interval, Mar27th, April2nd, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, April3rd, (int)DayOfWeek.Sunday);
+            
+            interval = factory.CreateFromStartDate(Period.Weekly, April3rd);
             AssertInterval(interval, April3rd, April9th, Period.Weekly);
 
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar28th, (int)DayOfWeek.Sunday);
+            interval = factory.CreateFromStartDate(Period.Weekly, Mar27th);
             AssertInterval(interval, Mar27th, April2nd, Period.Weekly);
 
             interval = interval.Next();
@@ -42,25 +30,10 @@ namespace RecurringInterval.Tests
         {
             var factory = new IntervalFactory();
 
-            var interval = factory.CreateFromEndDay(Period.Weekly, April2nd, (int)DayOfWeek.Saturday);
+            var interval = factory.CreateFromStartDate(Period.Weekly, April2nd);
             AssertInterval(interval, April2nd, April8th, Period.Weekly);
 
-            interval = factory.CreateFromEndDay(Period.Weekly, April1st, (int)DayOfWeek.Saturday);
-            AssertInterval(interval, Mar26th, April1st, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar31st, (int)DayOfWeek.Saturday);
-            AssertInterval(interval, Mar26th, April1st, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar30th, (int)DayOfWeek.Saturday);
-            AssertInterval(interval, Mar26th, April1st, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar29th, (int)DayOfWeek.Saturday);
-            AssertInterval(interval, Mar26th, April1st, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, April3rd, (int)DayOfWeek.Saturday);
-            AssertInterval(interval, April2nd, April8th, Period.Weekly);
-
-            interval = factory.CreateFromEndDay(Period.Weekly, Mar28th, (int)DayOfWeek.Saturday);
+            interval = factory.CreateFromStartDate(Period.Weekly, Mar26th);
             AssertInterval(interval, Mar26th, April1st, Period.Weekly);
 
             interval = interval.Next();
@@ -72,7 +45,7 @@ namespace RecurringInterval.Tests
         {
             var factory = new IntervalFactory();
 
-            var result = factory.CreateFromEndDay(Period.Weekly, DateTime.UtcNow, (int)DayOfWeek.Sunday);
+            var result = factory.CreateFromStartDate(Period.Weekly, new DateTime(2017, 8, 7));
 
             // assert
             Assert.AreEqual(DayOfWeek.Monday, result.StartDate.DayOfWeek);
@@ -85,7 +58,7 @@ namespace RecurringInterval.Tests
         {
             var factory = new IntervalFactory();
 
-            var result = factory.CreateFromEndDay(Period.Weekly, DateTime.UtcNow, (int)DayOfWeek.Saturday);
+            var result = factory.CreateFromStartDate(Period.Weekly, new DateTime(2017, 8, 6));
 
             // assert
             Assert.AreEqual(DayOfWeek.Sunday, result.StartDate.DayOfWeek);
